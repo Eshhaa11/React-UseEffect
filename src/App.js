@@ -6,16 +6,24 @@ function App() {
     const fetchPokemon = () => {
         fetch("https://pokeapi.co/api/v2/pokemon")
             .then((response) => response.json())
-            .then((data) => setData(data));
-            .catch(error => console.log(error));
+            .then((data) => {
+                console.log(data.results);
+            })
+            .catch(error => console.error("error fetching" , error));
     }
 
     useEffect(() => {
         fetchPokemon();
-    }, [data.length]);
+    }, [data.length])
+
+    return (
+      <div>
 
 
-
+      </div>
+    );
 }
+
+export default App;
 
 
