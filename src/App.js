@@ -8,7 +8,7 @@ function App() {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.results);
+      
         setData(data.results);
       })
       .catch((error) => console.error("error fetching", error));
@@ -17,12 +17,11 @@ function App() {
   const handleNext = () => {
     setOffset (prev => prev += 20);
   }
-  
+
   const handleNext = () => {
     setOffset (prev => prev += 20);
   }
   
-
   useEffect(() => {
     fetchPokemon();
   }, [data.length]);
