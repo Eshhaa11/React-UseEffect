@@ -38,7 +38,7 @@ function App() {
     })}
       </ul>
       <button onClick={handlePrev}>Previous</button>
-      
+      <button onClick={handleNext}>Next</button>
     </div>
   );
 }
