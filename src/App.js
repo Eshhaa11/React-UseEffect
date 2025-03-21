@@ -8,7 +8,6 @@ function App() {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-      
         setData(data.results);
       })
       .catch((error) => console.error("error fetching", error));
@@ -33,7 +32,7 @@ function App() {
           const { name } = val;
           return <li key={key}>{name}</li>;
         })}
-      </ol>
+      </ul>
     </div>
   );
 }
