@@ -37,7 +37,8 @@ function App() {
         )
     })}
       </ul>
-      <button onClick={handlePrev}>Prev</button>
+      <button onClick={handlePrev}>Previous</button>
+      
     </div>
   );
 }
