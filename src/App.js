@@ -18,7 +18,11 @@ function App() {
     setOffset (prev => prev += 20);
   }
   
+  const handleNext = () => {
+    setOffset (prev => prev += 20);
+  }
   
+
   useEffect(() => {
     fetchPokemon();
   }, [data.length]);
