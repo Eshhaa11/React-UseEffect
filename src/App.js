@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-
 function App() {
-  const [data, setData] = useState([]);
+  const [offset, setOffset] = useState(0); 
+  const [data, setData] = useState([])
 
   const fetchPokemon = (os) => {
     let url = `https://pokeapi.co/api/v2/pokemon/?offset=${os}&limit=20`
     fetch(url)
-      .then((res => res.json())
-      .then((data => {
+      .then(res => res.json())
+      .then((data) => {
         setData(data.results)
       })
       .catch((error) => console.error("error fetching", error))
