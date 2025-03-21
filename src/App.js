@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [data, setData] = useState([]);
 
-  const fetchPokemon = () => {
+  const fetchPokemon = (os) => {
     let url = `https://pokeapi.co/api/v2/pokemon/?offset=${os}&limit=20`
     fetch(url)
       .then((res => res.json())
@@ -17,7 +17,7 @@ function App() {
     setOffset (prev => prev += 20);
   }
 
-  const handleNext = () => {
+  const handlePrev = () => {
     setOffset (prev => prev -= 20);
   }
   
@@ -30,7 +30,7 @@ function App() {
       <ul>
         {data.map((val, key) => {
           const { name } = val
-          return
+          return (
            <li key={key}>
             {name}
             </li>
