@@ -18,7 +18,9 @@ function App() {
 
     return (
         <ol>
-
+             {data.map((val, key) => {
+                const { name } = val;
+             }}
         </ol>
       <div>
 
