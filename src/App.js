@@ -5,12 +5,14 @@ function App() {
 
   const fetchPokemon = async (os) => {
     let url = `https://pokeapi.co/api/v2/pokemon/?offset=${os}&limit=20`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data.results);
-      })
-      .catch((error) => console.error("error fetching", error));
+
+    try
+    // fetch(url)
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     setData(data.results);
+    //   })
+    //   .catch((error) => console.error("error fetching", error));
   };
 
   const handleNext = () => {
