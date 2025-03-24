@@ -14,12 +14,6 @@ function App() {
     } catch (error) {
       console.error("error fetching ", error)
     }
-    // fetch(url)
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     setData(data.results);
-    //   })
-    //   .catch((error) => console.error("error fetching", error));
   }
 
   const handleNext = () => {
