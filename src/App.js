@@ -7,7 +7,7 @@ function App() {
     let url = `https://pokeapi.co/api/v2/pokemon/?offset=${os}&limit=20`;
 
     try {
-      const pokeApi = await fetch(url);
+      const pokeApiResponse = await fetch(url);
       const data = await pokeApiResponse.json()
       setData(data.results)
 
