@@ -8,7 +8,10 @@ function App() {
 
     try {
       const pokeApi = await fetch(url);
+      catch data = await pokeApiResponse.json()
+
     } catch data = await pokeApiResponse.json()
+      set
     
     // fetch(url)
     //   .then((res) => res.json())
