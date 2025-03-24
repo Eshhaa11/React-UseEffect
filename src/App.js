@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [offset, setOffset] = useState(0);
   const [data, setData] = useState([]);
+  const [profileUrl, setProfileUrl] = useState("");
 
   const fetchPokemon = async (os) => {
     let url = `https://pokeapi.co/api/v2/pokemon/?offset=${os}&limit=20`;
@@ -37,16 +38,20 @@ function App() {
       <div>
       <ul>
         {data.map((val, key) => {
-          const { name } = val;
-
-          return <li key={key}>{name}</li>;
+          const { name, url } = val;
+          return (
+            <button onClick={() => handleProfileUrl(url)} key={key}>
+              {name}
+            </button>
+          )
         })}
       </ul>
       <button onClick={handlePrev}>Previous</button>
       <button onClick={handleNext}>Next</button>
     </div>
     <div>
-      <PokemonCharacterProfile/>
+      <PokemonCharacterProfile/>"
+      profileUrl={profileUrl}"
     </div>
     </div>
   );
