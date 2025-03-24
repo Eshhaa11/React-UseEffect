@@ -6,7 +6,9 @@ function App() {
   const fetchPokemon = async (os) => {
     let url = `https://pokeapi.co/api/v2/pokemon/?offset=${os}&limit=20`;
 
-    try
+    try {
+      
+    }
     // fetch(url)
     //   .then((res) => res.json())
     //   .then((data) => {
