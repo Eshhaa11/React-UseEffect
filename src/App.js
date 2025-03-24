@@ -34,6 +34,7 @@ function App() {
       <ul>
         {data.map((val, key) => {
           const { name } = val;
+          
           return <li key={key}>{name}</li>;
         })}
       </ul>
