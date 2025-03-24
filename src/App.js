@@ -40,3 +40,8 @@ function App() {
 }
 
 export default App;
+
+
+//A promise is a promise that is resolved when the fetch is successful.
+//The fetch() method returns a Promise that resolves to the Response to that request, whether it is successful or not.
+//You can also define a catch() method on the promise, which will be called if the promise is rejected.
