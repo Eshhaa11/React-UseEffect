@@ -10,7 +10,6 @@ function App() {
       const pokeApi = await fetch(url);
       catch data = await pokeApiResponse.json()
       setData(data.results);
-
     } 
     
     // fetch(url)
