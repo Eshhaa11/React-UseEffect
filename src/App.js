@@ -58,6 +58,12 @@ function App() {
 }
 
 const PokemonCharacterProfile = () => {
+
+  const fetchPokemonProfile = async () => {
+    const response = await fetch(profileUrl);
+    const data = await response.json();
+    console.log(data);
+  }
   return (
     <div>
       <h4>Pokemon Profile</h4>
