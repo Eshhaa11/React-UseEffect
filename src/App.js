@@ -57,7 +57,7 @@ function App() {
   );
 }
 
-const PokemonCharacterProfile = () => {
+const PokemonCharacterProfile = ({ profileUrl }) => {
 
   const fetchPokemonProfile = async () => {
     const response = await fetch(profileUrl)
