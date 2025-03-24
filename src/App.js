@@ -64,7 +64,11 @@ const PokemonCharacterProfile = () => {
     const data = await response.json();
     console.log(data);
   }
-  return (
+
+  useEffect(() => {
+
+  }, [profileUrl])
+  return
     <div>
       <h4>Pokemon Profile</h4>
     </div>
