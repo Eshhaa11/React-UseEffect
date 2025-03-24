@@ -54,6 +54,8 @@ const PokemonCharacterProfile = () => {
       <h4>Pokemone Profile</h4>
     </div>
   )
+}
+
 export default App;
 
 
