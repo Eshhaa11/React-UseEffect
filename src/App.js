@@ -60,19 +60,19 @@ function App() {
 const PokemonCharacterProfile = () => {
 
   const fetchPokemonProfile = async () => {
-    const response = await fetch(profileUrl);
-    const data = await response.json();
-    console.log(data);
+    const response = await fetch(profileUrl)
+    const data = await response.json()
+    console.log(data)
   }
 
   useEffect(() => {
 
   }, [profileUrl])
-  return
+  return (
     <div>
       <h4>Pokemon Profile</h4>
     </div>
-  );
-};
+  )
+}
 
 export default App;
