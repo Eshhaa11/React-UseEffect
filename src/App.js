@@ -8,17 +8,18 @@ function App() {
 
     try {
       const pokeApi = await fetch(url);
-      catch data = await pokeApiResponse.json()
+      const data = await pokeApiResponse.json()
       setData(data.results);
     } catch (error) {
-    
+      console.error("error fetching ", error)
+    }
     // fetch(url)
     //   .then((res) => res.json())
     //   .then((data) => {
     //     setData(data.results);
     //   })
     //   .catch((error) => console.error("error fetching", error));
-  };
+  }
 
   const handleNext = () => {
     setOffset((prev) => (prev += 20));
