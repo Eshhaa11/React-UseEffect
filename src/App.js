@@ -39,6 +39,9 @@ function App() {
       <button onClick={handlePrev}>Previous</button>
       <button onClick={handleNext}>Next</button>
     </div>
+    <div>
+      
+    </div>
   );
 }
 
