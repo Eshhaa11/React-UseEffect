@@ -42,9 +42,12 @@ function App() {
     <div>
       <PokemonCharacterProfile/>
     </div>
+    </div>
   );
 }
 
+
+const PokemonCharacterProfile = () => {
 export default App;
 
 
