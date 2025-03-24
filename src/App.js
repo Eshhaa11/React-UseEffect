@@ -24,6 +24,10 @@ function App() {
     setOffset((prev) => (prev -= 20));
   };
 
+  const handleProfileUrl = (url) => {
+    setProfileUrl(url)
+  }
+
   useEffect(() => {
     fetchPokemon(offset);
   }, [offset]);
@@ -34,7 +38,7 @@ function App() {
       <ul>
         {data.map((val, key) => {
           const { name } = val;
-          
+
           return <li key={key}>{name}</li>;
         })}
       </ul>
