@@ -9,7 +9,8 @@ function App() {
     try {
       const pokeApi = await fetch(url);
       const data = await pokeApiResponse.json()
-      setData(data.results);
+      setData(data.results)
+
     } catch (error) {
       console.error("error fetching ", error)
     }
