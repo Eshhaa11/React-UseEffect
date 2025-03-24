@@ -30,6 +30,7 @@ function App() {
 
   return (
     <div>
+      <div>
       <ul>
         {data.map((val, key) => {
           const { name } = val;
@@ -48,10 +49,11 @@ function App() {
 
 
 const PokemonCharacterProfile = () => {
+  return (
+    <div>
+      <h4>Pokemone Profile</h4>
+    </div>
+  )
 export default App;
 
 
-//A promise is a promise that is resolved when the fetch is successful.
-//The fetch() method returns a Promise that resolves to the Response to that request, whether it is successful or not.
-//You can also define a catch() method on the promise, which will be called if the promise is rejected.
-//The fetch() method takes one mandatory argument, the path to the resource you want to fetch. It returns a Promise that resolves to the Response to that request, whether it is successful or not.
