@@ -62,8 +62,11 @@ const PokemonCharacterProfile = ({ profileUrl }) => {
   } 
 
   useEffect(() => {
-    fetchPokemonProfile()
-  }, [profileUrl])
+    if (profileUrl) {
+      fetchPokemonProfile();
+    }
+  }, [profileUrl]);
+
   return (
     <div>
       <h1>Pokemon Profile</h1>
