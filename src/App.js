@@ -66,8 +66,9 @@ const PokemonCharacterProfile = ({ profileUrl }) => {
   }
 
   useEffect(() => {
-
+      fetchPokemonProfile()
   }, [profileUrl])
+
   return (
     <div>
       <h4>Pokemon Profile</h4>
