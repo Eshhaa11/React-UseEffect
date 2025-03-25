@@ -58,6 +58,7 @@ function App() {
 }
 
 const PokemonCharacterProfile = ({ profileUrl }) => {
+  const [data, setData] = useState({});
 
   const fetchPokemonProfile = async () => {
     const response = await fetch(profileUrl)
