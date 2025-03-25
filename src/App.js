@@ -1,29 +1,27 @@
 import { useEffect, useState } from "react";
 function App() {
   const [offset, setOffset] = useState(0);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([0]);
   const [profileUrl, setProfileUrl] = useState("");
 
   const fetchPokemon = async (os) => {
-    let url = `https://pokeapi.co/api/v2/pokemon/?offset=${os}&limit=20`;
+    let url = `https://pokeapi.co/api/v2/pokemon?limit=20&offset=${os}`;
 
     try {
       const pokeApiResponse = await fetch(url);
       const data = await pokeApiResponse.json();
+
       setData(data.results);
     } catch (error) {
-      console.error("error fetching ", error);
+      console.log("error fetching", error);
     }
   };
-
   const handleNext = () => {
     setOffset((prev) => (prev += 20));
   };
-
-  const handlePrev = () => {
+  const handlePrevious = () => {
     setOffset((prev) => (prev -= 20));
   };
-
   const handleProfileUrl = (url) => {
     setProfileUrl(url);
   };
@@ -31,7 +29,6 @@ function App() {
   useEffect(() => {
     fetchPokemon(offset);
   }, [offset]);
-
   return (
     <div>
       <div>
@@ -45,37 +42,33 @@ function App() {
             );
           })}
         </ul>
-        <button onClick={handlePrev}>Previous</button>
+        <button onClick={handlePrevious}>Previous</button>
         <button onClick={handleNext}>Next</button>
       </div>
       <div>
-        <PokemonCharacterProfile 
-         profileUrl={profileUrl}
-         />
+        <PokemonCharacterProfile profileUrl={profileUrl} />
       </div>
     </div>
   );
 }
-
 const PokemonCharacterProfile = ({ profileUrl }) => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState({})
+
 
   const fetchPokemonProfile = async () => {
-    const response = await fetch(profileUrl)
-    const data = await response.json()
-    console.log(data)
-  }
+    const response = await fetch(profileUrl);
+    const data = await response.json();
+    setData(data);
+  } 
 
   useEffect(() => {
-      fetchPokemonProfile()
-  }, 
-  [profileUrl]);
+    fetchPokemonProfile()
+  }, [profileUrl])
   return (
     <div>
-      <h4>Pokemon Profile</h4>
-      <p>Name: {data.name}</p>
+      <h1>Pokemon Profile</h1>
     </div>
-  )
-}
+  );
+};
 
 export default App;
