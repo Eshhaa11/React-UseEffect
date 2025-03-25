@@ -72,7 +72,7 @@ const PokemonCharacterProfile = ({ profileUrl }) => {
   return (
     <div>
       <h4>Pokemon Profile</h4>
-      
+      <p>Name: {data.name}</p>
     </div>
   )
 }
